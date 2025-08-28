@@ -1,4 +1,4 @@
-## ✨ Features
+#qq# ✨ Features
 
 - **Oh My Zsh** with **Spaceship theme** for a beautiful and functional prompt
 - **Custom terminal utilities** with cool functions and aliases
@@ -77,7 +77,8 @@ terminal-setup/
 
 ### Fonts
 - **Powerline fonts** - For better prompt display
-- **Nerd Fonts** - For icons and symbols
+- **Nerd Fonts** - For icons and symbols (automatically downloaded if package not available)
+- **Alternative fonts** - Hack and Noto fonts as fallbacks
 
 ### Plugins
 - **zsh-autosuggestions** - Fish-like autosuggestions
@@ -140,6 +141,13 @@ After installation, you can:
    # Refresh font cache
    fc-cache -fv
    # Restart terminal application
+   ```
+   
+2. **Nerd Fonts package not available:**
+   ```bash
+   # The installer will automatically download Nerd Fonts
+   # If that fails, alternative fonts will be installed
+   # You can also manually install: sudo apt install fonts-hack-ttf fonts-noto-color-emoji
    ```
 
 2. **Plugins not working:**

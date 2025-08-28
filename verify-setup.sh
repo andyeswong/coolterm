@@ -181,11 +181,11 @@ fi
 # Check fonts
 echo -e "${BLUE}Fonts:${NC}"
 ((total_checks++))
-if fc-list | grep -i "nerd\|powerline" >/dev/null 2>&1; then
-    print_status "Nerd Fonts and Powerline fonts are available"
+if fc-list | grep -i "nerd\|powerline\|hack\|noto" >/dev/null 2>&1; then
+    print_status "Fonts are available (Nerd Fonts, Powerline, Hack, or Noto)"
     ((passed_checks++))
 else
-    print_warning "Nerd Fonts or Powerline fonts may not be properly installed"
+    print_warning "Fonts may not be properly installed, but this won't affect core functionality"
 fi
 
 # Check shell default
