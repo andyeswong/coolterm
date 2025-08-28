@@ -336,5 +336,5 @@ echo "${COLOR_BOLD_CYAN}👤 User:${COLOR_RESET} ${COLOR_GREEN}$username${COLOR_
 echo "${COLOR_BOLD_CYAN}🖥️  Host:${COLOR_RESET} ${COLOR_GREEN}$hostname${COLOR_RESET}"
 echo "${COLOR_BOLD_CYAN}🌐 Local IP:${COLOR_RESET} ${COLOR_GREEN}$local_ip${COLOR_RESET}"
 echo "${COLOR_BOLD_CYAN}🌍 Public IP:${COLOR_RESET} ${COLOR_GREEN}$public_ip${COLOR_RESET}"
-echo "${COLOR_BOLD_PURPLE}💜 PurpleMX${COLOR_RESET} - Your enhanced terminal experience"
+echo "${COLOR_BOLD_PURPLE}💜 Powered by PurpleMX Development${COLOR_RESET}"
 echo ""
