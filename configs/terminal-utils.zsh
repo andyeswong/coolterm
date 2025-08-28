@@ -24,6 +24,18 @@ export COLOR_BOLD_WHITE="\033[1;37m"
 # Cool functions
 # =============================================================================
 
+# PurpleMX branding function
+purplemx_info() {
+    echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
+    echo "${COLOR_BOLD_PURPLE}💜 PurpleMX Terminal Environment${COLOR_RESET}"
+    echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
+    echo "${COLOR_CYAN}Version:${COLOR_RESET} 1.0.0"
+    echo "${COLOR_CYAN}Theme:${COLOR_RESET} Spaceship + Custom"
+    echo "${COLOR_CYAN}Features:${COLOR_RESET} Enhanced utilities, plugins, and functions"
+    echo "${COLOR_BOLD_PURPLE}💜 PurpleMX${COLOR_RESET} - Your terminal, your way!"
+    echo ""
+}
+
 # Show system info in a cool way
 sysinfo() {
     echo "${COLOR_BOLD_CYAN}🖥️  System Information${COLOR_RESET}"
@@ -271,6 +283,9 @@ coolhelp() {
     echo "${COLOR_BOLD_CYAN}🚀 Cool Terminal Functions${COLOR_RESET}"
     echo "${COLOR_CYAN}═══════════════════════════════════════${COLOR_RESET}"
     echo ""
+    echo "${COLOR_BOLD_PURPLE}PurpleMX Terminal Environment${COLOR_RESET}"
+    echo "  ${COLOR_PURPLE}purplemx_info${COLOR_RESET} - Show PurpleMX branding and info"
+    echo ""
     echo "${COLOR_BOLD_GREEN}System Information:${COLOR_RESET}"
     echo "  ${COLOR_GREEN}sysinfo${COLOR_RESET} - Show system information"
     echo "  ${COLOR_GREEN}diskusage${COLOR_RESET} - Show disk usage"
@@ -303,3 +318,23 @@ coolhelp() {
 # Initialize with welcome message
 echo "${COLOR_BOLD_CYAN}🚀 Cool Terminal Utilities loaded!${COLOR_RESET}"
 echo "${COLOR_CYAN}Type 'coolhelp' to see all available functions${COLOR_RESET}"
+
+# Custom welcome message with system info
+echo ""
+echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}🎉 Welcome to PurpleMX Terminal! 🎉${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
+echo ""
+
+# Get system information
+local username=$(whoami)
+local hostname=$(hostname)
+local local_ip=$(hostname -I | awk '{print $1}' 2>/dev/null || echo "Unknown")
+local public_ip=$(curl -s --max-time 5 https://ipinfo.io/ip 2>/dev/null || echo "Unable to fetch")
+
+echo "${COLOR_BOLD_CYAN}👤 User:${COLOR_RESET} ${COLOR_GREEN}$username${COLOR_RESET}"
+echo "${COLOR_BOLD_CYAN}🖥️  Host:${COLOR_RESET} ${COLOR_GREEN}$hostname${COLOR_RESET}"
+echo "${COLOR_BOLD_CYAN}🌐 Local IP:${COLOR_RESET} ${COLOR_GREEN}$local_ip${COLOR_RESET}"
+echo "${COLOR_BOLD_CYAN}🌍 Public IP:${COLOR_RESET} ${COLOR_GREEN}$public_ip${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}💜 PurpleMX${COLOR_RESET} - Your enhanced terminal experience"
+echo ""

@@ -195,9 +195,8 @@ source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null || true
 
 # Cool welcome message
-echo "🚀 Welcome to your enhanced terminal, $(whoami)! 🚀"
-echo "💡 Try: 'help' for commands, 'weather' for weather, 'myip' for your IP"
-echo "🎨 Your Spaceship prompt is ready with cool features!"
+echo "${COLOR_BOLD_PURPLE}🎉 Welcome to PurpleMX Terminal! 🎉${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}💜 PurpleMX${COLOR_RESET} - Your enhanced terminal experience"
 echo ""
 
 # Source cool terminal utilities
