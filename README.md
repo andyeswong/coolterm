@@ -1,4 +1,4 @@
-#qq# ✨ Features
+## ✨ Features
 
 - **Oh My Zsh** with **Spaceship theme** for a beautiful and functional prompt
 - **Custom terminal utilities** with cool functions and aliases

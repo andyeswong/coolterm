@@ -9,11 +9,7 @@ autoload -Uz add-zsh-hook
 autoload -Uz vcs_info
 
 # Cool welcome message function
-cool_welcome() {
-    local colors=("🟥" "🟧" "🟨" "🟩" "🟦" "🟪" "🟫" "⬜")
-    local color=${colors[$RANDOM % ${#colors[@]}]}
-    echo "$color Welcome to your enhanced terminal! $color"
-}
+
 
 # Random fortune cookie
 random_fortune() {
@@ -95,9 +91,6 @@ add-zsh-hook chpwd cool_chpwd
 # Cool aliases for this theme
 alias theme-help='echo "🎨 Cool Spaceship Theme Commands:" && echo "  theme-help: Show this help" && echo "  cool-welcome: Show welcome message" && echo "  fortune: Show random fortune" && echo "  colors: Show available colors"'
 
-# Show available colors
-alias colors='for code in {000..255}; do echo -n "\\e[38;5;${code}m $code"; done; echo'
 
 # Initialize
-cool_welcome
 random_fortune
