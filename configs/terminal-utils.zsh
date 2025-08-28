@@ -27,7 +27,7 @@ export COLOR_BOLD_WHITE="\033[1;37m"
 # PurpleMX branding function
 purplemx_info() {
     echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
-    echo "${COLOR_BOLD_PURPLE}💜 PurpleMX Terminal Environment${COLOR_RESET}"
+    echo "${COLOR_BOLD_PURPLE}💜 PurpleMX Development Environment${COLOR_RESET}"
     echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
     echo "${COLOR_CYAN}Version:${COLOR_RESET} 1.0.0"
     echo "${COLOR_CYAN}Theme:${COLOR_RESET} Spaceship + Custom"
@@ -283,7 +283,7 @@ coolhelp() {
     echo "${COLOR_BOLD_CYAN}🚀 Cool Terminal Functions${COLOR_RESET}"
     echo "${COLOR_CYAN}═══════════════════════════════════════${COLOR_RESET}"
     echo ""
-    echo "${COLOR_BOLD_PURPLE}PurpleMX Terminal Environment${COLOR_RESET}"
+    echo "${COLOR_BOLD_PURPLE}PurpleMX Development Environment${COLOR_RESET}"
     echo "  ${COLOR_PURPLE}purplemx_info${COLOR_RESET} - Show PurpleMX branding and info"
     echo ""
     echo "${COLOR_BOLD_GREEN}System Information:${COLOR_RESET}"
@@ -322,7 +322,7 @@ echo "${COLOR_CYAN}Type 'coolhelp' to see all available functions${COLOR_RESET}"
 # Custom welcome message with system info
 echo ""
 echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
-echo "${COLOR_BOLD_PURPLE}🎉 Welcome to PurpleMX Terminal! 🎉${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}🎉 Welcome to your enhanced terminal! 🎉${COLOR_RESET}"
 echo "${COLOR_BOLD_PURPLE}═══════════════════════════════════════${COLOR_RESET}"
 echo ""
 

@@ -12,7 +12,7 @@ autoload -Uz vcs_info
 cool_welcome() {
     local colors=("🟥" "🟧" "🟨" "🟩" "🟦" "🟪" "🟫" "⬜")
     local color=${colors[$RANDOM % ${#colors[@]}]}
-    echo "$color Welcome to PurpleMX Terminal! $color"
+    echo "$color Welcome to your enhanced terminal! $color"
 }
 
 # Random fortune cookie
@@ -26,8 +26,8 @@ random_fortune() {
         "⚡ Speed is a feature"
         "🎨 Code is art, make it beautiful"
         "🔧 Fix one bug, prevent two more"
-        "💜 PurpleMX - Your terminal, your way!"
-        "🚀 PurpleMX Terminal - Enhanced productivity!"
+        "💜 PurpleMX - Empowering developers!"
+        "🚀 PurpleMX - Enhanced development tools!"
     )
     local fortune=${fortunes[$RANDOM % ${#fortunes[@]}]}
     echo "$fortune"

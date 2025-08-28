@@ -195,8 +195,8 @@ source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null || true
 
 # Cool welcome message
-echo "${COLOR_BOLD_PURPLE}🎉 Welcome to PurpleMX Terminal! 🎉${COLOR_RESET}"
-echo "${COLOR_BOLD_PURPLE}💜 PurpleMX${COLOR_RESET} - Your enhanced terminal experience"
+echo "${COLOR_BOLD_PURPLE}🎉 Welcome to your enhanced terminal! 🎉${COLOR_RESET}"
+echo "${COLOR_BOLD_PURPLE}💜 Powered by PurpleMX Development${COLOR_RESET}"
 echo ""
 
 # Source cool terminal utilities
