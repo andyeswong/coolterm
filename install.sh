@@ -73,10 +73,18 @@ sudo apt install -y \
     nodejs \
     npm \
     fonts-powerline \
-    fonts-nerd-fonts \
     unzip \
     build-essential
 
+
+# Try to install Nerd Fonts, but don't fail if not available
+print_status "Installing Nerd Fonts..."
+if apt-cache search fonts-nerd-fonts | grep -q fonts-nerd-fonts; then
+    sudo apt install -y fonts-nerd-fonts
+    print_status "✓ Nerd Fonts installed via package manager"
+else
+    print_warning "fonts-nerd-fonts package not available, will install manually"
+fi
 # Install Oh My Zsh
 print_status "Installing Oh My Zsh..."
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
@@ -175,16 +183,33 @@ mkdir -p "$HOME/.local/share/fonts"
 
 # Download and install Nerd Fonts
 if [[ ! -f "$HOME/.local/share/fonts/Hack Regular Nerd Font Complete.ttf" ]]; then
+    print_status "Downloading and installing Nerd Fonts..."
     cd /tmp
-    wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
-    unzip -q Hack.zip -d "$HOME/.local/share/fonts/"
-    rm Hack.zip
-    fc-cache -fv
-    print_status "✓ Nerd Fonts installed"
+    
+    # Try to download Nerd Fonts
+    if wget -q --spider https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip; then
+        wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
+        if [[ -f "Hack.zip" ]]; then
+            unzip -q Hack.zip -d "$HOME/.local/share/fonts/"
+            rm Hack.zip
+            fc-cache -fv
+            print_status "✓ Nerd Fonts installed successfully"
+        else
+            print_warning "Failed to download Nerd Fonts, continuing without them"
+        fi
+    else
+        print_warning "Unable to reach Nerd Fonts repository, continuing without them"
+    fi
 else
     print_warning "Nerd Fonts already installed, skipping..."
 fi
 
+# Install alternative fonts if Nerd Fonts failed
+if [[ ! -f "$HOME/.local/share/fonts/Hack Regular Nerd Font Complete.ttf" ]]; then
+    print_status "Installing alternative fonts..."
+    sudo apt install -y fonts-hack-ttf fonts-noto-color-emoji
+    print_status "✓ Alternative fonts installed"
+fi
 # Set zsh as default shell
 print_status "Setting zsh as default shell..."
 if [[ "$SHELL" != "/bin/zsh" ]]; then
